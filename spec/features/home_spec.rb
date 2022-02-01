@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'home page' do
+RSpec.describe 'home page', type: :feature do
   it 'has a link to return to the landing page' do
     visit ('/')
     expect(page).to have_link('Return to home')
