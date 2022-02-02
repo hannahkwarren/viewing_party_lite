@@ -13,7 +13,7 @@ class MoviesController < ApplicationController
     end
     data = JSON.parse(response.body, symbolize_names: true)
     movies = data[:results][0..39]
-    # binding.pry
+    
     user = User.find(params[:id])
     render "/users/#{user.id}/movies"
   end
