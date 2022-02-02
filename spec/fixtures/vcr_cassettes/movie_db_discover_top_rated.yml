@@ -42,11 +42,11 @@ http_interactions:
       X-Cache:
       - Hit from cloudfront
       Via:
-      - 1.1 5c70ae1eac1857f85c7660495d949094.cloudfront.net (CloudFront)
+      - 1.1 4e2a7874b5959279490dd3b94b18a312.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - PHL50-C1
       X-Amz-Cf-Id:
-      - m-wnR1T6LB4McWDjg3mTIk4s3W3ghAI0kE1lcwKHnOtjFYssXDOs-g==
+      - MMiz_-zpFyzexddWlUUvOdhmaworl-oxGg2cWyJuHAayNc4X1qaitA==
       Age:
       - '244'
     body:
@@ -199,11 +199,11 @@ http_interactions:
       X-Cache:
       - Hit from cloudfront
       Via:
-      - 1.1 cf426d8f6e10e609055662f292295434.cloudfront.net (CloudFront)
+      - 1.1 18235244f92adbfef142c197cb3eac0c.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - PHL50-C1
       X-Amz-Cf-Id:
-      - uh1RED-5tJsa573TOsgkFqaagmo92lOHQ7M7o6NvXa16hJJaytzG2A==
+      - gxUV8s4GfAjgVUgMjkOhlHjYbdgKYwCaLU_8lypdnMq4NWk0mxuueQ==
       Age:
       - '244'
     body:
