@@ -4,15 +4,15 @@ class UsersController < ApplicationController
   end
 
   def new
-    @user = User.new
   end
 
   def create
-    user = User.new(user_params)
+    binding.pry
+    @user = User.new(user_params)
 
-    if user.save
+    if @user.save
       flash[:success] = "User created!"
-      redirect_to user_path(user)
+      redirect_to user_path(@user)
     else
       flash[:alert] = "#{user_params[:email]} has already been taken, please try another email address."
       redirect_to "/register"
