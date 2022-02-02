@@ -6,7 +6,15 @@ RSpec.describe 'home page', type: :feature do
     expect(page).to have_link('Return to home')
     expect(page).to have_content('Viewing Party')
   end
-
+  
+  it 'has a create user button' do
+    visit ('/')
+    expect(page).to have_button('Create a New User')
+    
+    click_button('Create a New User')
+    expect(current_path).to eq('/register')
+  end
+  
   it 'has links to user dashboards' do
     user1 = User.create!(name: 'Joe Schmoe', email: 'jschmoe@mail.com')
     user2 = User.create!(name: 'Jane Schmoe', email: 'janeschmoe@mail.com')
@@ -18,13 +26,5 @@ RSpec.describe 'home page', type: :feature do
     end
     click_link "#{user1.email}'s Dashboard"
     expect(current_path).to eq("/users/#{user1.id}")
-  end
-
-  it 'has a create user button' do
-    visit ('/')
-    expect(page).to have_button('Create a New User')
-
-    click_button 'Create a New User'
-    expect(current_path).to eq('/register')
   end
 end

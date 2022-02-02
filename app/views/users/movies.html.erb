@@ -1,0 +1,18 @@
+<h1>Viewing Party Lite</h1>
+
+<h2>Top Rated Movies</h2>
+
+<%= button_to 'Discover Page', "/users/#{@user.id}/discover", method: :get %>
+
+<div>
+<% @movie_data.each do |movie| %>
+    <% movie[:results].each do |m| %>
+    <div class="movie">
+        <span class="original_title"><%= link_to m[:original_title], "/users/#{@user.id}/movies/#{m[:id]}" %></span>
+        <span class="vote_average">Vote Average: <%= m[:vote_average] %></span>
+    </div>
+    <% end%>
+<% end %>
+</div>
+
+
