@@ -6,7 +6,6 @@ class MoviesController < ApplicationController
     conn = Faraday.new(url: "https://api.themoviedb.org/3/") do |faraday|
       faraday.params["api_key"] = ENV['movies_api_key']
     end
-
     
     @movie_data = []
     count = 1
@@ -30,6 +29,22 @@ class MoviesController < ApplicationController
     
     render "/users/movies"
 
+  end
+
+  def search 
+    conn = Faraday.new(url: "https://api.themoviedb.org/3/") do |faraday|
+      faraday.params["api_key"] = ENV['movies_api_key']
+    end
+
+    response = conn.get("search/keyword") do |request|
+      request.params["api_key"] = ENV['movies_api_key']
+      request.params["query"] = params[:search]
+    end
+
+    data = JSON.parse(response.body, symbolize_names: true)
+    movies = data[:results][0..39]
+    user = User.find(params[:id])
+    render "/users/movies"
   end
 
 

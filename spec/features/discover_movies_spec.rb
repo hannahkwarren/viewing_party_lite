@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "Discover movies page", type: :feature do
 
-  it "has button for listing top-rated movies", :vcr do 
+  xit "has button for listing top-rated movies", :vcr do 
     user1 = User.create!(name: "Joe Schmoe", email: "joeschmoe@mail.com")
     visit "/users/#{user1.id}/discover"
 
@@ -16,12 +16,14 @@ RSpec.describe "Discover movies page", type: :feature do
 
   xit "has button for searching for movies by keyword", :vcr do 
     user1 = User.create!(name: "Joe Schmoe", email: "joeschmoe@mail.com")
-    visit "/user/#{user1.id}/discover"
+    visit "/users/#{user1.id}/discover"
 
     expect(page).to have_button("Find Movies")
     
-
-
+    fill_in :query, with: "Spider"
+    click_button "Find Movies"
+    
+    expect(current_path).to eq("/users/#{user1.id}/movies?q=spider")
   end
 
 end
