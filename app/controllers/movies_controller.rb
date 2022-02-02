@@ -1,20 +1,19 @@
 class MoviesController < ApplicationController 
 
   def top_rated
-    conn = Faraday.new(url: "https://api.themoviedb.org") do |faraday|
-      faraday.headers["x-api-key"] = ENV['movies_api_key']
-      # faraday.headers["access_token"] = ENV['movies_access_token']
-      faraday.headers["sort_by"] = "vote_average.desc"
+    conn = Faraday.new(url: "https://api.themoviedb.org/3/") do |faraday|
+      faraday.params["api_key"] = ENV['movies_api_key']
     end
-    response = conn.get("/3/discover/movie")
 
+    response = conn.get("discover/movie") do |request|
+      request.params["api_key"] = ENV['movies_api_key']
+      request.params["sort_by"] = "vote_average.desc"
+    end
     data = JSON.parse(response.body, symbolize_names: true)
-    binding.pry
-    members = data[:results][0][:members]
-
-    found_members = members.find_all {|m| m[:last_name] == params[:search]}
-    @member = found_members.first
-    render "welcome/index"
+    # binding.pry
+    movies = data[:results][0..39]
+    user = User.find(params[:id])
+    render "/users/#{user.id}/movies"
   end
 
 
