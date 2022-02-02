@@ -14,7 +14,7 @@ RSpec.describe "Discover movies page", type: :feature do
     
   end
 
-  xit "has button for searching for movies by keyword", :vcr do 
+  it "has button for searching for movies by keyword", :vcr do 
     user1 = User.create!(name: "Joe Schmoe", email: "joeschmoe@mail.com")
     visit "/users/#{user1.id}/discover"
 

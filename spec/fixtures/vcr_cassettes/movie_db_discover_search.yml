@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.themoviedb.org/3/discover/movie?api_key=<movies_api_key>&sort_by=vote_average.desc
+    uri: https://api.themoviedb.org/3/search/movie?api_key=<movies_api_key>&query=Phoenix
     body:
       encoding: US-ASCII
       string: ''
@@ -25,7 +25,7 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Wed, 02 Feb 2022 16:45:47 GMT
+      - Wed, 02 Feb 2022 22:52:00 GMT
       Server:
       - openresty
       Access-Control-Allow-Origin:
@@ -40,18 +40,120 @@ http_interactions:
       Vary:
       - Accept-Encoding
       X-Cache:
-      - Hit from cloudfront
+      - Miss from cloudfront
       Via:
-      - 1.1 fe01b0d08a6c82e83617785283fae2da.cloudfront.net (CloudFront)
+      - 1.1 94344436af750794f6bc9899d89d3a0a.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - EWR52-C3
+      - EWR53-C2
       X-Amz-Cf-Id:
-      - q3PoKpyL1zQsdsSJBDMX6PEKpDhySS3-4Ql2TsuJajXbkB9NlZQ1cw==
-      Age:
-      - '165'
+      - QctjXAA5-068_aIeAFoMKkUAxqUAEneeiWGKbmAOc-zfvjVWVB1mQQ==
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        eyJwYWdlIjoxLCJyZXN1bHRzIjpbeyJhZHVsdCI6ZmFsc2UsImJhY2tkcm9wX3BhdGgiOiIvc05rbmppaDBOUHlZRHlSeWpheHE3MHBKWFZlLmpwZyIsImdlbnJlX2lkcyI6WzgwLDEwNzQ5LDEwNzUyXSwiaWQiOjkzMzc4MSwib3JpZ2luYWxfbGFuZ3VhZ2UiOiJlbiIsIm9yaWdpbmFsX3RpdGxlIjoiTXVzaWNhbCBLdXJzaSIsIm92ZXJ2aWV3IjoiQSBwYXJ0eSBnYW1lIGluIHdoaWNoIHBsYXllcnMgY29tcGV0ZSBmb3IgYSBkZWNyZWFzaW5nIG51bWJlciBvZiBjaGFpcnMsIHRoZSBsb3NlcnMgaW4gc3VjY2Vzc2l2ZSByb3VuZHMgYmVpbmcgdGhvc2UgdW5hYmxlIHRvIGZpbmQgYSBjaGFpciB0byBzaXQgb24gd2hlbiB0aGUgYWNjb21wYW55aW5nIG11c2ljIGlzIHN0b3BwZWQuIiwicG9wdWxhcml0eSI6MCwicG9zdGVyX3BhdGgiOiIvOW1NdHZ5b3ZYYXBTYXlCN0hmSHFJbkxMRHdnLmpwZyIsInJlbGVhc2VfZGF0ZSI6IjIwMjItMDEtMjQiLCJ0aXRsZSI6Ik11c2ljYWwgS3Vyc2kiLCJ2aWRlbyI6ZmFsc2UsInZvdGVfYXZlcmFnZSI6MCwidm90ZV9jb3VudCI6MH0seyJhZHVsdCI6ZmFsc2UsImJhY2tkcm9wX3BhdGgiOiIvYnoxZUQ0c2hGS0RQWUtxS0c0MzFnMWFVOGlnLmpwZyIsImdlbnJlX2lkcyI6WzE0LDE4XSwiaWQiOjkzMzcwOCwib3JpZ2luYWxfbGFuZ3VhZ2UiOiJlbiIsIm9yaWdpbmFsX3RpdGxlIjoiRGF1bnRpbmcgSW5mZXJubyIsIm92ZXJ2aWV3IjoiQSByZXRlbGxpbmcgb2YgdGhlIGZpcnN0LCBzZWNvbmQsIGFuZCBwYXJ0IG9mIHRoZSB0aGlyZCBjYW50b3Mgb2YgRGFudGUncyBJbmZlcm5vLiIsInBvcHVsYXJpdHkiOjEuNCwicG9zdGVyX3BhdGgiOiIvNzh6Tmw1YmV4WU8zaE56NWdoYmprZ3FnYWM4LmpwZyIsInJlbGVhc2VfZGF0ZSI6IjIwMjItMDItMDEiLCJ0aXRsZSI6IkRhdW50aW5nIEluZmVybm8iLCJ2aWRlbyI6ZmFsc2UsInZvdGVfYXZlcmFnZSI6MTAsInZvdGVfY291bnQiOjF9LHsiYWR1bHQiOmZhbHNlLCJiYWNrZHJvcF9wYXRoIjpudWxsLCJnZW5yZV9pZHMiOls4NzhdLCJpZCI6OTMzNjEzLCJvcmlnaW5hbF9sYW5ndWFnZSI6InB0Iiwib3JpZ2luYWxfdGl0bGUiOiJSdXJhbCIsIm92ZXJ2aWV3IjoiIiwicG9wdWxhcml0eSI6MC45MDMsInBvc3Rlcl9wYXRoIjoiLzJLVGtVRjQ0eEJZUzBCck5ZVFBBQzBIRzRXZy5qcGciLCJyZWxlYXNlX2RhdGUiOiIyMDIwLTAxLTAyIiwidGl0bGUiOiJSdXJhbCIsInZpZGVvIjpmYWxzZSwidm90ZV9hdmVyYWdlIjoxMCwidm90ZV9jb3VudCI6MX0seyJhZHVsdCI6ZmFsc2UsImJhY2tkcm9wX3BhdGgiOm51bGwsImdlbnJlX2lkcyI6WzM3LDE4XSwiaWQiOjkzMzQ2Nywib3JpZ2luYWxfbGFuZ3VhZ2UiOiJlcyIsIm9yaWdpbmFsX3RpdGxlIjoiU2NoaXNtIiwib3ZlcnZpZXciOiIiLCJwb3B1bGFyaXR5IjoxLjQsInBvc3Rlcl9wYXRoIjoiL3pRNkNDek9zU1QzclZtUmRMZkhuOERyRDZmci5qcGciLCJyZWxlYXNlX2RhdGUiOiIyMDIyLTAyLTAxIiwidGl0bGUiOiJTY2hpc20iLCJ2aWRlbyI6ZmFsc2UsInZvdGVfYXZlcmFnZSI6MTAsInZvdGVfY291bnQiOjF9LHsiYWR1bHQiOmZhbHNlLCJiYWNrZHJvcF9wYXRoIjoiLzhsQ0xPTGFOa1ZBclhBbFZiZE1hUVh1eUJObC5qcGciLCJnZW5yZV9pZHMiOlsxNCwxMiwzNywxNl0sImlkIjo5MzM0MzUsIm9yaWdpbmFsX2xhbmd1YWdlIjoidGUiLCJvcmlnaW5hbF90aXRsZSI6Ik11c2ljYSBvZiBIaWVtIiwib3ZlcnZpZXciOiJNZXNhaW9uaWtvcyAoTWVkaWV2YWwpIHBlcmlvZCwgQXQgdGhlIEdhcmRlbiBpbiBXb25kZXIgT3JiaXMuIFdoYXQgaGFwcGVucyBpZiB0d28gdHJvdWJsZWQgaW5kaXZpZHVhbHMgY2xhc2hlZCBvdmVyIGEgcG93ZXJmdWwgYW5kIGRhcmsgb2JqZWN0LGEgbXVzaWMgYm94PyIsInBvcHVsYXJpdHkiOjEuNCwicG9zdGVyX3BhdGgiOiIvZ1dQY3JxQzJxTU0xMFBUeVYwVjYxNmdtUzF0LmpwZyIsInJlbGVhc2VfZGF0ZSI6IjIwMjEtMDYtMjYiLCJ0aXRsZSI6Ik11c2ljYSBvZiBIaWVtIiwidmlkZW8iOmZhbHNlLCJ2b3RlX2F2ZXJhZ2UiOjEwLCJ2b3RlX2NvdW50IjoxfSx7ImFkdWx0IjpmYWxzZSwiYmFja2Ryb3BfcGF0aCI6bnVsbCwiZ2VucmVfaWRzIjpbMzVdLCJpZCI6OTMzNDA4LCJvcmlnaW5hbF9sYW5ndWFnZSI6ImVuIiwib3JpZ2luYWxfdGl0bGUiOiJNb2Rlcm4gTGl2aW5nICYgWW91ISIsIm92ZXJ2aWV3IjoiQSBwcm9tb3Rpb25hbCBzaG9ydCBmb3IgdGhlIGZlYXR1cmUgZmlsbSBcIlJvYWNoIE1vdGVsXCIuIFRoZSBzaG9ydCBmaWxtIFwiTW9kZXJuIExpdmluZyBhbmQgWW91IVwiIHNhdGlyaXplcyBcIlJlZCBTY2FyZVwiIGVyYSBpbnN0cnVjdGlvbmFsIHNob3J0cywgd2hpbGUgdGhlIHRpbWUgcGVyaW9kIGl0c2VsZiBpcyB1cCBpbiB0aGUgYWlyIGFuZCBsZWZ0IGFtYmlndW91cy4gVGhlIHNob3J0IGZvbGxvd3MgXCJZb3VyIE5laWdoYm9yIE1hcmdpZVwiIGF0IHRoZSBoYW5kcyBvZiBhIHJ1dGhsZXNzLCBkZW1hbmRpbmcsIGFuZCBnb2RsaWtlIG5hcnJhdG9yLCBhcyBoZSBwdXRzIGhlciBvbiBkaXNwbGF5IGFuZCBvbiB0aGUgc3BvdCwgYXNraW5nIGhlciBxdWVzdGlvbnMsIHRoYXQgaGUgaGltc2VsZiBtYXkgbm90IGV2ZW4ga25vdyB0aGUgYW5zd2VycyB0by4iLCJwb3B1bGFyaXR5IjoxLjQsInBvc3Rlcl9wYXRoIjoiL3FFQ1JXb280TkRnY2p4UVVyZExCeDBxSk5mUy5qcGciLCJyZWxlYXNlX2RhdGUiOiIyMDIxLTA3LTA0IiwidGl0bGUiOiJNb2Rlcm4gTGl2aW5nICYgWW91ISIsInZpZGVvIjpmYWxzZSwidm90ZV9hdmVyYWdlIjoxMCwidm90ZV9jb3VudCI6MX0seyJhZHVsdCI6ZmFsc2UsImJhY2tkcm9wX3BhdGgiOiIvMUNrOGpoTXBpcjhEMm5oRGRjZWwxa0tHQ1Z4LmpwZyIsImdlbnJlX2lkcyI6WzUzLDI3XSwiaWQiOjkzMzIzOCwib3JpZ2luYWxfbGFuZ3VhZ2UiOiJlbiIsIm9yaWdpbmFsX3RpdGxlIjoiRm9vdHN0ZXBzIiwib3ZlcnZpZXciOiJBIHN0dWRlbnQgaXMgc3VwcG9zZWQgdG8gYmUgaG9tZSBhbG9uZSB3aGVuIGhlIGhlYXJzIGZvb3RzdGVwcyB1cHN0YWlycy4uLiIsInBvcHVsYXJpdHkiOjEuOTYsInBvc3Rlcl9wYXRoIjoiL2Y3QWJQUzUyaFlBeFRCYnhudHo3eG1vZXp6VS5qcGciLCJyZWxlYXNlX2RhdGUiOiIyMDIyLTAxLTMxIiwidGl0bGUiOiJGb290c3RlcHMiLCJ2aWRlbyI6ZmFsc2UsInZvdGVfYXZlcmFnZSI6MTAsInZvdGVfY291bnQiOjF9LHsiYWR1bHQiOmZhbHNlLCJiYWNrZHJvcF9wYXRoIjpudWxsLCJnZW5yZV9pZHMiOltdLCJpZCI6OTMzMTk3LCJvcmlnaW5hbF9sYW5ndWFnZSI6ImZhIiwib3JpZ2luYWxfdGl0bGUiOiLYqNiv2YjZhiDZgtix2KfYsSDZgtio2YTbjCIsIm92ZXJ2aWV3IjoiQSBGaWxtIGJ5IEJlaHJvb3ogU2hvZWliaSIsInBvcHVsYXJpdHkiOjAuNjIsInBvc3Rlcl9wYXRoIjoiL2JBS204dFh2QU1zSEtyckdHNE5sZXhuNU9yaS5qcGciLCJyZWxlYXNlX2RhdGUiOiIiLCJ0aXRsZSI6Ik5vIFByaW9yIEFwcG9pbnRtZW50IiwidmlkZW8iOmZhbHNlLCJ2b3RlX2F2ZXJhZ2UiOjEwLCJ2b3RlX2NvdW50IjoxfSx7ImFkdWx0IjpmYWxzZSwiYmFja2Ryb3BfcGF0aCI6bnVsbCwiZ2VucmVfaWRzIjpbODc4XSwiaWQiOjkzMzE4MCwib3JpZ2luYWxfbGFuZ3VhZ2UiOiJlcyIsIm9yaWdpbmFsX3RpdGxlIjoiRUw6IFVsdGltYXRlIEN1dCIsIm92ZXJ2aWV3IjoiIiwicG9wdWxhcml0eSI6MC42LCJwb3N0ZXJfcGF0aCI6Ii8zSldHWkxlUWFraTZWSjJxaEFROUNtMjlWNzkuanBnIiwicmVsZWFzZV9kYXRlIjoiMjAxOS0wOC0zMCIsInRpdGxlIjoiRUw6IFVsdGltYXRlIEN1dCIsInZpZGVvIjpmYWxzZSwidm90ZV9hdmVyYWdlIjoxMCwidm90ZV9jb3VudCI6MX0seyJhZHVsdCI6ZmFsc2UsImJhY2tkcm9wX3BhdGgiOiIvZ1FXbmppa3pRc043MjNBbU45TnpGdlhxTFEwLmpwZyIsImdlbnJlX2lkcyI6WzgwLDI4XSwiaWQiOjkzMzE1NCwib3JpZ2luYWxfbGFuZ3VhZ2UiOiJlbiIsIm9yaWdpbmFsX3RpdGxlIjoiTWlkbmlnaHQgSmFja2FscyAtIEFjdC5sIiwib3ZlcnZpZXciOiIiLCJwb3B1bGFyaXR5IjowLjg0LCJwb3N0ZXJfcGF0aCI6bnVsbCwicmVsZWFzZV9kYXRlIjoiIiwidGl0bGUiOiJNaWRuaWdodCBKYWNrYWxzIC0gQWN0LmwiLCJ2aWRlbyI6ZmFsc2UsInZvdGVfYXZlcmFnZSI6MTAsInZvdGVfY291bnQiOjF9LHsiYWR1bHQiOmZhbHNlLCJiYWNrZHJvcF9wYXRoIjpudWxsLCJnZW5yZV9pZHMiOls5NjQ4LDUzXSwiaWQiOjkzMzEyOCwib3JpZ2luYWxfbGFuZ3VhZ2UiOiJlcyIsIm9yaWdpbmFsX3RpdGxlIjoiRWwgR3Vpb25pc3RhIiwib3ZlcnZpZXciOiIiLCJwb3B1bGFyaXR5IjoxLjQ2NSwicG9zdGVyX3BhdGgiOiIvcDdmN2ZibXNWQm5naFQ1dFpDeW9UUGV5emRiLmpwZyIsInJlbGVhc2VfZGF0ZSI6IiIsInRpdGxlIjoiRWwgR3Vpb25pc3RhIiwidmlkZW8iOmZhbHNlLCJ2b3RlX2F2ZXJhZ2UiOjEwLCJ2b3RlX2NvdW50IjoxfSx7ImFkdWx0IjpmYWxzZSwiYmFja2Ryb3BfcGF0aCI6bnVsbCwiZ2VucmVfaWRzIjpbMTA3NDksMTA3NTEsMTgsMzUsMTA0MDJdLCJpZCI6OTMzMDc4LCJvcmlnaW5hbF9sYW5ndWFnZSI6ImtvIiwib3JpZ2luYWxfdGl0bGUiOiLsl4ntgbQiLCJvdmVydmlldyI6Ikl0IHRlbGxzIHRoZSBzdG9yeSBvZiBhbiB1bmNsZSB3aG8gdGFrZXMgY2FyZSBvZiBoaXMgbmVwaGV3LCBhbiBlbGVtZW50YXJ5IHNjaG9vbCBzdHVkZW50IHdobyBoYXMgYW54aWV0eSBkaXNvcmRlciBhbmQgb2JzZXNzaXZl4oCTY29tcHVsc2l2ZSBkaXNvcmRlciwgZHVlIHRvIGhpcyBzaXN0ZXIncyBkaXZvcmNlLiIsInBvcHVsYXJpdHkiOjEuMzQ3LCJwb3N0ZXJfcGF0aCI6Ii9jcWEwTmt3NW55RzRBc0dlMVpCYk90dWo4RHguanBnIiwicmVsZWFzZV9kYXRlIjoiMjAyMS0xMi0xMSIsInRpdGxlIjoiVW5jbGUiLCJ2aWRlbyI6ZmFsc2UsInZvdGVfYXZlcmFnZSI6MTAsInZvdGVfY291bnQiOjF9LHsiYWR1bHQiOmZhbHNlLCJiYWNrZHJvcF9wYXRoIjoiL2w4RUJTRzNoNm1PdzdINmc2ZUVXOTVmc2ZuMC5qcGciLCJnZW5yZV9pZHMiOlsxNCwxMl0sImlkIjo5MzMwMzksIm9yaWdpbmFsX2xhbmd1YWdlIjoidGUiLCJvcmlnaW5hbF90aXRsZSI6IkJyYXZlIFNwaXJpdCIsIm92ZXJ2aWV3IjoiQSBwb29yIGFuZCBodW5ncnkgb3JwaGFuIGZyb20gRWFydGggZ2V0cyBhIGNoYW5jZSB0byB3aXRuZXNzIHdvbmRlci4gSGUgZ2V0cyBhIGNoYW5jZSB0byB0cmF2ZWwgdG8gdGhlIEdhcmRlbiBvZiBXb25kZXIgT3JiaXMgYnkgYSBtYWdpY2FsIHZlaGljbGUuIFdoeSBkaWQgaGUgZ2V0IHRoaXMgY2hhbmNlLCB3aGF0IGhhZCBoYXBwZW5lZD8iLCJwb3B1bGFyaXR5IjoxLjAyMSwicG9zdGVyX3BhdGgiOiIvcGtMMjFMMWRqMTloMkdndG02YlU4R3FUVHhKLmpwZyIsInJlbGVhc2VfZGF0ZSI6IjIwMjAtMDYtMTgiLCJ0aXRsZSI6IkJyYXZlIFNwaXJpdCIsInZpZGVvIjpmYWxzZSwidm90ZV9hdmVyYWdlIjoxMCwidm90ZV9jb3VudCI6MX0seyJhZHVsdCI6ZmFsc2UsImJhY2tkcm9wX3BhdGgiOm51bGwsImdlbnJlX2lkcyI6WzE4LDE2XSwiaWQiOjkzMzAxNiwib3JpZ2luYWxfbGFuZ3VhZ2UiOiJlbiIsIm9yaWdpbmFsX3RpdGxlIjoiU2VudGltZW50YWwiLCJvdmVydmlldyI6IkEgc2hvcnQgb2YgYW4gb2xkIG1hbiByZWZsZWN0aW5nIG9uIHRoZSBtZW1vcmllcyBvZiBoaXMgZGVjZWFzZWQgbG92ZXIgYXMgaGUgcGFja3MgaGlzIHRoaW5ncyIsInBvcHVsYXJpdHkiOjEuOTE3LCJwb3N0ZXJfcGF0aCI6Ii85a0kyekNxbjltd0JybWNCeEtIamZKc0Z0Z08uanBnIiwicmVsZWFzZV9kYXRlIjoiMjAyMC0wMy0zMSIsInRpdGxlIjoiU2VudGltZW50YWwiLCJ2aWRlbyI6ZmFsc2UsInZvdGVfYXZlcmFnZSI6MTAsInZvdGVfY291bnQiOjF9LHsiYWR1bHQiOmZhbHNlLCJiYWNrZHJvcF9wYXRoIjoiL2JUUnRJWHpjUkNSYnBBR1c0TlVwR0FzVkR6MC5qcGciLCJnZW5yZV9pZHMiOls5OV0sImlkIjo5MzI3ODAsIm9yaWdpbmFsX2xhbmd1YWdlIjoiZW4iLCJvcmlnaW5hbF90aXRsZSI6IkpvdXJuZXkgb2YgRmFpdGg6IFRoZSBOZXcgV29ybGQiLCJvdmVydmlldyI6IkEgc2VxdWVsIHRvIHRoZSBhY2NsYWltZWQgSm91cm5leSBvZiBGYWl0aCBkb2N1bWVudGFyeSwgdGhpcyBzdHVubmluZyBmaWxtIHByZXNlbnRzIHN0YXJ0bGluZyBpbnNpZ2h0cyBmcm9tIDMyIHRvcCBzY2hvbGFycyBhcyB0aGV5IGNvbnRpbnVlIHRoZSBqb3VybmV5IGludG8gdGhlIEJvb2sgb2YgTW9ybW9uJ3MgdGhvdXNhbmQteWVhciBzcGFuLCBnaXZpbmcgaW5zaWdodCBpbnRvIHRoaXMgc2FjcmVkIHRleHQuIE1vcm1vbidzIGRlc2NyaXB0aW9uIG9mIHRoZSBsYW5kLCByZWxpZ2lvdXMgaGlzdG9yeSwgY3VsdHVyZSwgYW5kIHRyYWRpdGlvbnMgY3JlYXRlIGEgZmFzY2luYXRpbmcgbW9zYWljLiBCZWF1dGlmdWwgaW1hZ2VzIGZpbG1lZCBvbiBsb2NhdGlvbiBpbiBHdWF0ZW1hbGEgYW5kIE1leGljbyBjb21iaW5lZCB3aXRoIHRoZSBhcnQgb2YgSm9zZXBoIEJyaWNrZXkgaWxsdW1pbmF0ZSB0aGUgcmljaCBoaXN0b3J5IG9mIHRoZSBCb29rIG9mIE1vcm1vbi4iLCJwb3B1bGFyaXR5IjowLjg0LCJwb3N0ZXJfcGF0aCI6Ii81ZVRXTDk0UVRER2hNN0dUY0dUYzNIVGFSdEUuanBnIiwicmVsZWFzZV9kYXRlIjoiMjAwNy0xMC0wMSIsInRpdGxlIjoiSm91cm5leSBvZiBGYWl0aDogVGhlIE5ldyBXb3JsZCIsInZpZGVvIjpmYWxzZSwidm90ZV9hdmVyYWdlIjoxMCwidm90ZV9jb3VudCI6MX0seyJhZHVsdCI6ZmFsc2UsImJhY2tkcm9wX3BhdGgiOm51bGwsImdlbnJlX2lkcyI6Wzk5XSwiaWQiOjkzMjc3Nywib3JpZ2luYWxfbGFuZ3VhZ2UiOiJqYSIsIm9yaWdpbmFsX3RpdGxlIjoi56We5pyo6ZqG5LmL5LuLIFNpbmPDqXJpdMOpIiwib3ZlcnZpZXciOiJLYW1pa2kgUnl1bm9zdWtlJ3Mgam91cm5leSBvZiBzZWxmIGRpc2NvdmVyeSwgc2V0IGluIGZhbW91cyBFdXJvcGVhbiBjaXRpZXMgc3VjaCBhcyBQYXJpcywgTW9udC1TYWludC1NaWNoZWwgYW5kIEJhcmNlbG9uYS4gQSBncmFuZCBqb3VybmV5IHRocm91Z2ggRnJhbmNlIGFuZCBTcGFpbi4iLCJwb3B1bGFyaXR5IjoxLjE3NiwicG9zdGVyX3BhdGgiOiIvd2h3Q0djUGRVdzhpdldjdTVNMUIzVDlCRW45LmpwZyIsInJlbGVhc2VfZGF0ZSI6IjIwMTctMDEtMjAiLCJ0aXRsZSI6IlNpbmNlcml0ZSBLYW1pa2kgUnl1bm9zdWtlIiwidmlkZW8iOmZhbHNlLCJ2b3RlX2F2ZXJhZ2UiOjEwLCJ2b3RlX2NvdW50IjoxfSx7ImFkdWx0IjpmYWxzZSwiYmFja2Ryb3BfcGF0aCI6bnVsbCwiZ2VucmVfaWRzIjpbMThdLCJpZCI6OTMyNjY4LCJvcmlnaW5hbF9sYW5ndWFnZSI6ImRlIiwib3JpZ2luYWxfdGl0bGUiOiJET05ORVIiLCJvdmVydmlldyI6IiIsInBvcHVsYXJpdHkiOjAuNiwicG9zdGVyX3BhdGgiOiIvNXU1N1RNZVlIdWkzQUJzR1JCb0JVNU53eXNVLmpwZyIsInJlbGVhc2VfZGF0ZSI6IiIsInRpdGxlIjoiRE9OTkVSIiwidmlkZW8iOmZhbHNlLCJ2b3RlX2F2ZXJhZ2UiOjEwLCJ2b3RlX2NvdW50IjoxfSx7ImFkdWx0IjpmYWxzZSwiYmFja2Ryb3BfcGF0aCI6bnVsbCwiZ2VucmVfaWRzIjpbMTIsMzUsMTQsMjddLCJpZCI6OTMyNTk4LCJvcmlnaW5hbF9sYW5ndWFnZSI6ImVuIiwib3JpZ2luYWxfdGl0bGUiOiJQZWFjaHJpbmdzIiwib3ZlcnZpZXciOiJTdXBlciBNZWdhIHByZXNlbnRzIGEgYm95IGdvaW5nIHRvIHRoZSBzdG9yZSBhbmQgYWNjaWRlbnRhbGx5IGdldHMgaGltc2VsZiBpbnRvIHNvbWV0aGluZyB0aGF0IGhlIHByZXZpb3VzbHkgZGlkIG5vdCB1bmRlcnN0YW5kLiIsInBvcHVsYXJpdHkiOjAuNiwicG9zdGVyX3BhdGgiOm51bGwsInJlbGVhc2VfZGF0ZSI6IjIwMTAtMDEtMTUiLCJ0aXRsZSI6IlBlYWNocmluZ3MiLCJ2aWRlbyI6ZmFsc2UsInZvdGVfYXZlcmFnZSI6MTAsInZvdGVfY291bnQiOjF9LHsiYWR1bHQiOmZhbHNlLCJiYWNrZHJvcF9wYXRoIjpudWxsLCJnZW5yZV9pZHMiOls5NjQ4XSwiaWQiOjkzMjU2Mywib3JpZ2luYWxfbGFuZ3VhZ2UiOiJlcyIsIm9yaWdpbmFsX3RpdGxlIjoiSGVsbC1NYW46IEVsIFBlcmZlY3RvIFByb2R1Y3RvIERlIFR1IEltYWdpbmFjacOzbiIsIm92ZXJ2aWV3IjoiIiwicG9wdWxhcml0eSI6MC42LCJwb3N0ZXJfcGF0aCI6Ii92Y0plRmxPaW41aGRBdnNGWlJJR1VVOWRuWG0uanBnIiwicmVsZWFzZV9kYXRlIjoiMjAyMC0wMy0yNyIsInRpdGxlIjoiSGVsbC1NYW46IEVsIFBlcmZlY3RvIFByb2R1Y3RvIERlIFR1IEltYWdpbmFjacOzbiIsInZpZGVvIjpmYWxzZSwidm90ZV9hdmVyYWdlIjoxMCwidm90ZV9jb3VudCI6MX0seyJhZHVsdCI6ZmFsc2UsImJhY2tkcm9wX3BhdGgiOm51bGwsImdlbnJlX2lkcyI6WzI3XSwiaWQiOjkzMjU2MCwib3JpZ2luYWxfbGFuZ3VhZ2UiOiJlbiIsIm9yaWdpbmFsX3RpdGxlIjoic2Nvb2IgZG9vIGZyIiwib3ZlcnZpZXciOiJBIGhhcnJvd2luZyBsb29rIGludG8gdGhlIHJlYWxtIG9mIGNvbnNjaW91c25lc3MgYW5kIHNhbml0eS4iLCJwb3B1bGFyaXR5IjowLjk2LCJwb3N0ZXJfcGF0aCI6Ii9jcVhWYnVkQ2dVWFl5d0dUUnd0eXF5eVpObUIuanBnIiwicmVsZWFzZV9kYXRlIjoiIiwidGl0bGUiOiJzY29vYiBkb28gZnIiLCJ2aWRlbyI6ZmFsc2UsInZvdGVfYXZlcmFnZSI6MTAsInZvdGVfY291bnQiOjF9XSwidG90YWxfcGFnZXMiOjMyMTYyLCJ0b3RhbF9yZXN1bHRzIjo2NDMyMzR9
-  recorded_at: Wed, 02 Feb 2022 16:48:32 GMT
+      encoding: UTF-8
+      string: '{"page":1,"results":[{"adult":false,"backdrop_path":"/6H0CfLRcgq0Pcq34wNypC2V3W41.jpg","genre_ids":[878,28,12],"id":320288,"original_language":"en","original_title":"Dark
+        Phoenix","overview":"The X-Men face their most formidable and powerful foe
+        when one of their own, Jean Grey, starts to spiral out of control. During
+        a rescue mission in outer space, Jean is nearly killed when she''s hit by
+        a mysterious cosmic force. Once she returns home, this force not only makes
+        her infinitely more powerful, but far more unstable. The X-Men must now band
+        together to save her soul and battle aliens that want to use Grey''s new abilities
+        to rule the galaxy.","popularity":69.287,"poster_path":"/kZv92eTc0Gg3mKxqjjDAM73z9cy.jpg","release_date":"2019-06-05","title":"Dark
+        Phoenix","video":false,"vote_average":6,"vote_count":5029},{"adult":false,"backdrop_path":"/sO2VWeJ8qagNtYoznyLRL8TeSkw.jpg","genre_ids":[12,14,9648],"id":675,"original_language":"en","original_title":"Harry
+        Potter and the Order of the Phoenix","overview":"The rebellion begins! Lord
+        Voldemort has returned, but the Ministry of Magic is doing everything it can
+        to keep the wizarding world from knowing the truth – including appointing
+        Ministry official Dolores Umbridge as the new Defence Against the Dark Arts
+        professor at Hogwarts. When Umbridge refuses to teach practical defensive
+        magic, Ron and Hermione convince Harry to secretly train a select group of
+        students for the wizarding war that lies ahead. A terrifying showdown between
+        good and evil awaits in this enthralling film version of the fifth novel in
+        J.K. Rowling’s Harry Potter series. Prepare for battle!","popularity":217.89,"poster_path":"/tRoHysNFsXC2r0JiBL6iNHELut7.jpg","release_date":"2007-06-28","title":"Harry
+        Potter and the Order of the Phoenix","video":false,"vote_average":7.7,"vote_count":15925},{"adult":false,"backdrop_path":"/3RXc6plqoqXUFTsgMe41HBml9Pp.jpg","genre_ids":[27,9648,878],"id":443319,"original_language":"en","original_title":"Phoenix
+        Forgotten","overview":"20 years after three teenagers disappeared in the wake
+        of mysterious lights appearing above Phoenix, Arizona, unseen footage from
+        that night has been discovered, chronicling the final hours of their fateful
+        expedition.","popularity":18.122,"poster_path":"/q0BbjmTPSqF1QnZxHNc1GQ4JIHc.jpg","release_date":"2017-04-21","title":"Phoenix
+        Forgotten","video":false,"vote_average":6,"vote_count":215},{"adult":false,"backdrop_path":"/gFFs5F3nb1CRoWQ57sEA816bce0.jpg","genre_ids":[18],"id":254578,"original_language":"de","original_title":"Phoenix","overview":"A
+        disfigured concentration-camp survivor, unrecognizable after facial reconstruction
+        surgery, searches ravaged postwar Berlin for the husband who might have betrayed
+        her to the Nazis.","popularity":7.571,"poster_path":"/AucV9Srp4eX3BmPLcQLx7AtRIQj.jpg","release_date":"2014-09-25","title":"Phoenix","video":false,"vote_average":6.7,"vote_count":315},{"adult":false,"backdrop_path":"/7OJ2FUlCQKILEfPZXzqKWp3mbUA.jpg","genre_ids":[99],"id":726887,"original_language":"en","original_title":"Rising
+        Phoenix","overview":"The history and current standing of the Paralympic Games,
+        which has grown to become the world''s third largest sporting event.","popularity":15.358,"poster_path":"/oso09gID2bFk9q3Cni8GNOuzTWZ.jpg","release_date":"2020-08-26","title":"Rising
+        Phoenix","video":false,"vote_average":8.2,"vote_count":79},{"adult":false,"backdrop_path":"/ktJZuqsYfpChTVuDgk9NFsh3QKB.jpg","genre_ids":[35,18,10749],"id":15534,"original_language":"en","original_title":"Griffin
+        & Phoenix","overview":"A terminally ill man falls in love with a woman who
+        has a secret that threatens their time spent together.","popularity":8.903,"poster_path":"/kL1Jh2ahQH62SLDETwD2TpDhljP.jpg","release_date":"2006-09-12","title":"Griffin
+        & Phoenix","video":false,"vote_average":7.2,"vote_count":127},{"adult":false,"backdrop_path":"/h0pxtAQCGWcArbPxqudW5NbmUNc.jpg","genre_ids":[18,53,80,10749],"id":28047,"original_language":"en","original_title":"Phoenix","overview":"Gambling
+        fever -- along with a brutal bookie -- leads three crooked cops into a double-dealing
+        scheme that lands them in hot water way over their heads.","popularity":6.289,"poster_path":"/tkppRmx4iBvAeKlopfNTO8hnKxK.jpg","release_date":"1998-09-04","title":"Phoenix","video":false,"vote_average":5.2,"vote_count":42},{"adult":false,"backdrop_path":"/mWXU29QjfjEG37d0c2hE11MWRGq.jpg","genre_ids":[28,12,18,53],"id":11866,"original_language":"en","original_title":"Flight
+        of the Phoenix","overview":"When an oil rig in the Gobi Desert of Mongolia
+        proves unproductive, an aircraft crew are sent to shut the operation down.
+        However, on their way to Beijing, a major dust storm forces them to crash
+        their C-119 Flying Boxcar in an uncharted area of the desert.","popularity":15.942,"poster_path":"/pcj6unMsKCw0ogWFlUXmbc9gKap.jpg","release_date":"2004-12-17","title":"Flight
+        of the Phoenix","video":false,"vote_average":6,"vote_count":666},{"adult":false,"backdrop_path":"/61cz8dZkyIo9m5bVwwfrYcvVZiK.jpg","genre_ids":[12],"id":10243,"original_language":"en","original_title":"The
+        Flight of the Phoenix","overview":"A cargo aircraft crashes in a sandstorm
+        in the Sahara with less than a dozen men on board. One of the passengers is
+        an airplane designer who comes up with the idea of ripping off the undamaged
+        wing and using it as the basis for a replacement aircraft they will build
+        to escape before their food and water run out.","popularity":14.308,"poster_path":"/zrzLl7NWdjwGhVE7bqpOAxMVtF.jpg","release_date":"1965-12-15","title":"The
+        Flight of the Phoenix","video":false,"vote_average":7.2,"vote_count":220},{"adult":false,"backdrop_path":"/ndx5KCJZ6X3NV9qg5FVz6obJh83.jpg","genre_ids":[27,53,878],"id":321039,"original_language":"en","original_title":"The
+        Phoenix Incident","overview":"A number of ''missing person'' cases are reported
+        in Phoenix, Arizona when an unexplained light appears in the sky one night
+        in 1997.","popularity":7.422,"poster_path":"/2EWUeUO4IyiKwlX14XLUiCRMUNa.jpg","release_date":"2015-06-16","title":"The
+        Phoenix Incident","video":false,"vote_average":5.2,"vote_count":43},{"adult":false,"backdrop_path":"/3cQ8tuIcuQQqfO9yzIesE6i11Oi.jpg","genre_ids":[99],"id":926283,"original_language":"en","original_title":"Phoenix
+        Rising","overview":"Evan Rachel Wood is no stranger to the screen. From Westworld
+        to her latest performance in Kajillionaire, audiences have watched her grow.
+        But in this arrestingly intimate portrait of her experience as a domestic
+        violence survivor turned activist, we finally hear her with the clarity she
+        deserves.","popularity":6.307,"poster_path":null,"release_date":"2022-01-24","title":"Phoenix
+        Rising","video":false,"vote_average":0,"vote_count":1},{"adult":false,"backdrop_path":"/2wEk1MWDQA25PdqUlG7OVbx8sjT.jpg","genre_ids":[],"id":109928,"original_language":"en","original_title":"Phoenix","overview":"Inspired
+        by Michelangelo Antonioni''s 1961 classic L''Avventura, Michael Akers'' \"PHOENIX\"
+        is infused with symbolism and a sexy spark. Dylan Wells (Chad Edward Bartley)
+        has a good job, a great apartment and an exciting relationship with Ken Sparks
+        (Gaetano Jones, Boystown), his sexy well traveled boyfriend who just might
+        be \"the one.\" A great life, or so he believes, until Ken''s visit for Dylan''s
+        23rd birthday party is unexpectedly cut short when Ken is suddenly called
+        away to tend to a failing real estate deal, and then disappears.","popularity":2.71,"poster_path":"/9xbTvpmkQEZZCJ7JSB5ZZbATrDU.jpg","release_date":"2006-01-30","title":"Phoenix","video":false,"vote_average":5.1,"vote_count":10},{"adult":false,"backdrop_path":"/yxdPv51GWwP7MUoy7sJsQzp6i2L.jpg","genre_ids":[18,10770],"id":252735,"original_language":"en","original_title":"Griffin
+        and Phoenix","overview":"Griffin has been diagnosed with terminal cancer.
+        Instead of quietly facing his death, he decides to have fun in the time remaining.
+        At a college class on death, he meets Phoenix, who has terminal leukemia.","popularity":2.915,"poster_path":"/i77whLCPR0p1tXplwswMapZmQv7.jpg","release_date":"1976-02-27","title":"Griffin
+        and Phoenix","video":false,"vote_average":5.3,"vote_count":7},{"adult":false,"backdrop_path":"/jMptDjXGYmKYLmOoT3IGYZ6Xh5L.jpg","genre_ids":[878,28],"id":26358,"original_language":"fr","original_title":"Phoenix","overview":"When
+        a mining colony is taken over by genetically altered androids, an elite attack
+        team is sent in to take down the android leader.","popularity":1.693,"poster_path":"/lJ48HI1gXhKckoAQwm2iytUQAYk.jpg","release_date":"1995-01-01","title":"Phoenix","video":false,"vote_average":3.5,"vote_count":4},{"adult":false,"backdrop_path":"/ePh5TtbWn4QHNWzh4wq5gB8b85e.jpg","genre_ids":[878,18],"id":312131,"original_language":"en","original_title":"The
+        Phoenix Project","overview":"Four scientists craft a machine to reanimate
+        deceased organisms.","popularity":4.033,"poster_path":"/23T44yf2J8OYBt4tDOa7r1xv7NG.jpg","release_date":"2015-01-16","title":"The
+        Phoenix Project","video":false,"vote_average":4.2,"vote_count":19},{"adult":false,"backdrop_path":"/r1SKoJwyvvUTL80vkEP0L4kJmXH.jpg","genre_ids":[28,14,878],"id":26440,"original_language":"en","original_title":"Phoenix
+        the Warrior","overview":"Big hair, big guns, big personalities, and a serious
+        lack of wardrobe. She-Wolves of the Wasteland, a post-apocalyptic story that
+        features women--lots and lots of women--who leave little to the imagination
+        as they battle each other in various junkyards and gravel pits to determine
+        the fate of the entire world.","popularity":2.589,"poster_path":"/o1IFFOMM14zZPIOTFYTIk6JhoVq.jpg","release_date":"1988-10-31","title":"Phoenix
+        the Warrior","video":false,"vote_average":3.5,"vote_count":13},{"adult":false,"backdrop_path":null,"genre_ids":[878],"id":357705,"original_language":"en","original_title":"Phoenix
+        Point","overview":"When the apocalypse arrives, it takes the form of a biochemical
+        virus. All social structures break down and a new world order emerges from
+        the heart of the desert. As chaos sets in, we follow the adventures of some
+        unlikely survivors, all searching for the elusive cure at Phoenix Point.","popularity":2.624,"poster_path":"/ngPykHAmDdsiOxdNE20YXZukQk4.jpg","release_date":"2005-01-20","title":"Phoenix
+        Point","video":false,"vote_average":1.3,"vote_count":3},{"adult":false,"backdrop_path":null,"genre_ids":[],"id":166868,"original_language":"en","original_title":"Code
+        Name: Phoenix","overview":"A Hong Kong martial artist joins forces with a
+        U.S. marshal in 2020 to stop the release of a virus that halts the aging process.","popularity":2.458,"poster_path":"/55r5EzjqdvUBpECQzyHFRQke4CQ.jpg","release_date":"2000-03-02","title":"Code
+        Name: Phoenix","video":false,"vote_average":4,"vote_count":1},{"adult":false,"backdrop_path":"/lbjuHNhg9GtQnAizkpQXnDz7GXC.jpg","genre_ids":[18],"id":299998,"original_language":"en","original_title":"Watch
+        Phoenix Rise","overview":"Watch Phoenix Rise is the tale of a young lady named
+        Phoenix who is just another \"pretty face\" in the hood until she decides
+        to become an \"urban model\" . where she discovers that her growing fame has
+        a downside as it tests her relationships with friends and family.","popularity":1.781,"poster_path":"/8VHmhVXaQV1htJ18L070FviMf9e.jpg","release_date":"2014-01-11","title":"Watch
+        Phoenix Rise","video":false,"vote_average":0,"vote_count":0},{"adult":false,"backdrop_path":"/QF3EoCfT4dNJtmcXiOiFQ9yAL2.jpg","genre_ids":[27,878,53],"id":419825,"original_language":"en","original_title":"The
+        Phoenix Tapes ''97","overview":"In 1997, four campers went missing during
+        the Phoenix Lights incident and their bodies were never found. The Phoenix
+        Tapes 97 is comprised of their final footage. This film is dedicated to the
+        lives lost during the events displayed. To their families and friends and
+        to the authorities who continue to search for answers. ​ The tapes were found
+        by Dustin Miller''s father two years after Dustin was mysteriously shot and
+        killed at a traffic stop in Texas. Peter Miller believes his son was acting
+        as a whistleblower and had smuggled the tapes from his classified government
+        agency in an effort to expose the truth as to what really happened to the
+        four missing campers seen in the tapes. ​ After searching every newspaper
+        and media publication around Phoenix during that time period, we only found
+        one initial announcement that four campers were reported missing, as well
+        as a formal police report folder with local PD but the folder had no files
+        inside.","popularity":2.924,"poster_path":"/pcBro07U8hARvconcYHJAQGz50J.jpg","release_date":"2016-01-01","title":"The
+        Phoenix Tapes ''97","video":false,"vote_average":6.9,"vote_count":17}],"total_pages":10,"total_results":188}'
+  recorded_at: Wed, 02 Feb 2022 22:52:00 GMT
 recorded_with: VCR 6.0.0
