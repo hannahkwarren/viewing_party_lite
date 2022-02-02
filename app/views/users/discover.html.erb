@@ -6,7 +6,7 @@
 
 <h3>OR </h3>
 
-<%= form_with url: "/users/#{@user.id}/movies/?q=keyword", method: :get, local: true do |f| %>
+<%= form_with url: "/users/#{@user.id}/movies", method: :get, local: true do |f| %>
   <%= f.label :query %>
   <%= f.text_field :query, :placeholder => "Search by movie title" %>
   <%= f.submit "Find Movies" %>

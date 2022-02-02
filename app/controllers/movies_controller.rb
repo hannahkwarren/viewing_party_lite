@@ -1,7 +1,8 @@
 require 'faraday'
 
 class MoviesController < ApplicationController
-  def top_rated
+
+  def results
     conn = Faraday.new(url: 'https://api.themoviedb.org/3/') do |faraday|
       faraday.params['api_key'] = ENV['movies_api_key']
     end
@@ -29,6 +30,7 @@ class MoviesController < ApplicationController
       response = conn.get("search/movie") do |request|
         request.params["api_key"] = ENV['movies_api_key']
         request.params["query"] = params[:query]
+        request.params["page"] = 1
       end
       
       data = JSON.parse(response.body, symbolize_names: true)

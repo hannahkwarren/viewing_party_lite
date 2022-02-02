@@ -4,24 +4,15 @@
 
 <%= button_to 'Discover Page', "/users/#{@user.id}/discover", method: :get %>
 
-<table>
+<div>
 <% @movie_data.each do |movie| %>
-<<<<<<< Updated upstream
     <% movie[:results].each do |m| %>
-    <tr>
-    <td><%= link_to m[:original_title], "/users/#{@user.id}/movies/#{m[:id]}" %></td>
-    <td>Vote Average: <%= m[:vote_average] %></td>
-    </tr>
+    <div class="movie">
+        <span class="original_title"><%= link_to m[:original_title], "/users/#{@user.id}/movies/#{m[:id]}" %></span>
+        <span class="vote_average">Vote Average: <%= m[:vote_average] %></span>
+    </div>
     <% end%>
-=======
-    <section class="movie">
-    <tr>
-        <td><%= link_to movie[:original_title], "/users/#{@user.id}/movies/#{movie[:id]}" %></td>
-        <td>Vote Average: <%= movie[:vote_average] %></td>
-    </tr>
-    </section>
->>>>>>> Stashed changes
 <% end %>
-</table>
+</div>
 
-<%= button_t>
+

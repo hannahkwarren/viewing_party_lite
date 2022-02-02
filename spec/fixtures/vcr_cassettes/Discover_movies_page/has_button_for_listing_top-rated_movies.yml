@@ -25,7 +25,7 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Wed, 02 Feb 2022 21:40:05 GMT
+      - Wed, 02 Feb 2022 23:11:30 GMT
       Server:
       - openresty
       Access-Control-Allow-Origin:
@@ -40,15 +40,13 @@ http_interactions:
       Vary:
       - Accept-Encoding
       X-Cache:
-      - Hit from cloudfront
+      - Miss from cloudfront
       Via:
-      - 1.1 5c70ae1eac1857f85c7660495d949094.cloudfront.net (CloudFront)
+      - 1.1 d3ab4cd494305c2d222c92f599e3c7c6.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - PHL50-C1
+      - JFK51-C1
       X-Amz-Cf-Id:
-      - m-wnR1T6LB4McWDjg3mTIk4s3W3ghAI0kE1lcwKHnOtjFYssXDOs-g==
-      Age:
-      - '244'
+      - 2J8nVAAxUqd1cml0M4lBZo2bgpDbcjwkiy-bgwvB9YtsaXGVkQU-0Q==
     body:
       encoding: UTF-8
       string: '{"page":1,"results":[{"adult":false,"backdrop_path":"/iQFcwSGbZXMkeyKrxbPnwnRo5fl.jpg","genre_ids":[28,12,878],"id":634649,"original_language":"en","original_title":"Spider-Man:
@@ -156,7 +154,7 @@ http_interactions:
         of criminals kidnap the girl, forcing the Blind Man to leave his safe haven
         to save her.","popularity":263.94,"poster_path":"/r7HEBkkRN93d3eFBZgPJfRaob5p.jpg","release_date":"2021-08-12","title":"Don''t
         Breathe 2","video":false,"vote_average":7.5,"vote_count":1413}],"total_pages":3,"total_results":43}'
-  recorded_at: Wed, 02 Feb 2022 21:44:09 GMT
+  recorded_at: Wed, 02 Feb 2022 23:11:31 GMT
 - request:
     method: get
     uri: https://api.themoviedb.org/3/discover/movie?api_key=<movies_api_key>&page=2&primary_release_date.gte=2021-06-01&sort_by=vote_average.desc&vote_count.gte=1000
@@ -182,7 +180,7 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Wed, 02 Feb 2022 21:40:05 GMT
+      - Wed, 02 Feb 2022 23:11:31 GMT
       Server:
       - openresty
       Access-Control-Allow-Origin:
@@ -197,15 +195,13 @@ http_interactions:
       Vary:
       - Accept-Encoding
       X-Cache:
-      - Hit from cloudfront
+      - Miss from cloudfront
       Via:
-      - 1.1 cf426d8f6e10e609055662f292295434.cloudfront.net (CloudFront)
+      - 1.1 5c13c9f75e6e6d54f428b6693f8ee6e2.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - PHL50-C1
+      - JFK51-C1
       X-Amz-Cf-Id:
-      - uh1RED-5tJsa573TOsgkFqaagmo92lOHQ7M7o6NvXa16hJJaytzG2A==
-      Age:
-      - '244'
+      - q3Zu-RYKJkcM9CJNN012gBR68zeum89bOwWoO4vwMmQ91omXo_V9wg==
     body:
       encoding: UTF-8
       string: '{"page":2,"results":[{"adult":false,"backdrop_path":"/6viJBbovWxJYavdjPy7UPTLvaOS.jpg","genre_ids":[9648,27],"id":591275,"original_language":"en","original_title":"Fear
@@ -305,5 +301,5 @@ http_interactions:
         Street: 1994","video":false,"vote_average":6.8,"vote_count":1385},{"adult":false,"backdrop_path":"/3EmwUuGBp44hTzZGJqpzyiAmAVT.jpg","genre_ids":[14,10749,35],"id":593910,"original_language":"en","original_title":"Cinderella","overview":"Cinderella,
         an orphaned girl with an evil stepmother, has big dreams and with the help
         of her Fabulous Godmother, she perseveres to make them come true.","popularity":77.453,"poster_path":"/clDFqATL4zcE7LzUwkrVj3zHvk7.jpg","release_date":"2021-09-03","title":"Cinderella","video":false,"vote_average":6.6,"vote_count":1005}],"total_pages":3,"total_results":43}'
-  recorded_at: Wed, 02 Feb 2022 21:44:09 GMT
+  recorded_at: Wed, 02 Feb 2022 23:11:31 GMT
 recorded_with: VCR 6.0.0
