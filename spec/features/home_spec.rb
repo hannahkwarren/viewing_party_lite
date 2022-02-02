@@ -11,7 +11,7 @@ RSpec.describe 'home page', type: :feature do
     visit ('/')
     expect(page).to have_button('Create a New User')
     
-    click_button 'Create a New User'
+    click_button('Create a New User')
     expect(current_path).to eq('/register')
   end
   
