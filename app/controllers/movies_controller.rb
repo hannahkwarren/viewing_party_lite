@@ -12,8 +12,8 @@ class MoviesController < ApplicationController
       request.params["sort_by"] = "vote_average.desc"
     end
     data = JSON.parse(response.body, symbolize_names: true)
-    # binding.pry
     movies = data[:results][0..39]
+    # binding.pry
     user = User.find(params[:id])
     render "/users/#{user.id}/movies"
   end

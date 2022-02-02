@@ -11,7 +11,7 @@ RSpec.describe "Discover movies page", type: :feature do
     click_button("Find Top Rated Movies")
 
     expect(current_path).to eq("/users/#{user1.id}/movies?q=top%20rated")
-    # expect(page).to have_content()
+    
   end
 
   xit "has button for searching for movies by keyword" do 
