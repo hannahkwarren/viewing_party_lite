@@ -9,7 +9,7 @@ RSpec.describe "Discover movies page", type: :feature do
     expect(page).to have_button("Find Top Rated Movies")
     
     click_button("Find Top Rated Movies")
-
+    save_and_open_page
     expect(current_path).to eq("/users/#{user1.id}/movies?q=top%20rated")
     
   end

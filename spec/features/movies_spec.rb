@@ -10,8 +10,8 @@ RSpec.describe 'movies results page', type: :feature do
         
         user1 = User.create!(name: 'Joe Schmoe', email: 'jschmoe1@mail.com')
         visit("/users/#{user1.id}/discover")
-
         click_button 'Find Top Rated Movies'
+        save_and_open_page
 
         expect(current_path).to eq("/users/#{user1.id}/movies?q=top%20rated")
         expect(page).to have_css('.movie', count: 40)

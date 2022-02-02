@@ -1,0 +1,14 @@
+<h1>Viewing Party Lite</h1>
+
+<h2>Top Rated Movies</h2>
+
+<%= button_to 'Discover Page', "/users/#{@user.id}/discover", method: :get %>
+
+<table>
+<% @movie.each do |movie| %>
+    <tr>
+    <td><%= link_to movie[:original_title], "/users/#{@user.id}/movies/#{movie[:id]}" %></td>
+    <td>Vote Average: <%= movie[:vote_average] %></td>
+    </tr>
+<% end %>
+</table>
