@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Invitee, type: :model do 
+RSpec.describe UserParty, type: :model do 
 
   describe "relationships" do  
     it { should belong_to(:viewing_party) }
