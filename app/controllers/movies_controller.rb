@@ -2,6 +2,12 @@ require 'faraday'
 
 class MoviesController < ApplicationController
 
+  def connection 
+    Faraday.new(url: 'https://api.themoviedb.org/3/') do |faraday|
+      faraday.params['api_key'] = ENV['movies_api_key']
+    end
+  end
+  
   def results
     conn = Faraday.new(url: 'https://api.themoviedb.org/3/') do |faraday|
       faraday.params['api_key'] = ENV['movies_api_key']
@@ -40,5 +46,14 @@ class MoviesController < ApplicationController
     @user = User.find(params[:id])
     
     render "/users/movies"
+  end
+
+  def details 
+    response = connection.get("movie/#{params[:movie_id]}") do |request|
+      request.params["api_key"] = ENV['movies_api_key']
+    end
+    @user = User.find(params[:id])
+    @movie = JSON.parse(response.body, symbolize_names: true)
+    render "/users/details"
   end
 end
