@@ -24,11 +24,15 @@ class ViewingPartyController < ApplicationController
     @movie = JSON.parse(response.body, symbolize_names: true)
 
     user = User.find(params[:id])
-   binding.pry
-    @viewing_party = ViewingParty.new(party_params)
+   
+    @viewing_party = ViewingParty.create(party_params)
 
-    #for every invitee in params
-    #do viewing_party.invitee.create!(params[invitee.id])
+    params[:invitees].each do |invitee|
+      binding.pry
+      @viewing_party.invitees.create!(user_id: invitee.to_i)
+
+      @viewing_party.invitees.create(user_id: user.id, host: true)
+    end
 
     if @viewing_party.save
       flash[:success] = "Party created!"
@@ -41,6 +45,7 @@ class ViewingPartyController < ApplicationController
 
   private 
   def party_params
-    params.permit(:duration, :when, :start_time, :invitees)
+    params.permit(:duration, :when, :time)
   end
 end
+# , :invitees => []

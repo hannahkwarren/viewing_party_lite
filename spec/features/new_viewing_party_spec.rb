@@ -20,10 +20,11 @@ RSpec.describe "New Viewing Party page", type: :feature do
       
       #fill in "when" date with tomorrow
       page.find('#when').set(Time.now + 1.day)
-      fill_in :start_time, with: "8:00 pm"
-      
-      check "#{user2.name}"
-      check "#{user3.name}"
+      fill_in :time, with: "8:00 pm"
+
+      page.check("Jeffrey Schmoe")
+      page.check("Jamie Schmoe")
+
       click_button "Create Party"
 
       expect(current_path).to eq("/users/#{user1.id}/dashboard")
