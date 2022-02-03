@@ -1,0 +1,29 @@
+<h1>Viewing Party Lite</h1>
+
+<h2><%= @movie[:original_title] %></h2>
+
+<%= button_to "Discover Page", "/users/#{@user.id}/discover", method: :get %>
+
+<%= button_to "Create Viewing Party for #{@movie[:original_title]}", "/users/#{@user.id}/movies/#{@movie[:id]}/viewing-party/new", method: :get%>
+
+<div class="quick-stats">
+  <p>Vote Average: <%= @movie[:vote_average] %></p>
+
+  <p>Runtime: <%= to_hours_mins(@movie[:runtime]) %></p>
+
+  <p>Genre(s): <%= csl(@movie[:genres]) %></p>
+</div>
+
+<p>Summary:</p>
+<p><%= @movie[:overview] %></p>
+
+  <p>Cast: <% @movie_credits[:cast][0..9].each do |cast| %></p>
+    <p><%= cast[:name] %> as <%= cast[:character] %></p>
+    <% end %>
+
+<p><%= @movie_reviews[:total_results] %> Reviews</p>
+
+<% @movie_reviews[:results].each do |reviewer| %>
+  <p>Author: <%= reviewer[:author_details][:username] %></p>
+  <p><%= reviewer[:content] %></p>
+<% end %>
