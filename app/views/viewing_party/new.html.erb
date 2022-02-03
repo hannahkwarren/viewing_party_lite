@@ -16,7 +16,7 @@
   <p>Invite Users to Your Viewing Party</p>
     
     <% @users.each do |user| %>
-      <p><%= check_box_tag( 'invitees[]', user.id, nil, :id => user.name)%>
+      <p><%= check_box_tag( 'user_ids[]', user.id, nil, :id => user.name)%>
       <%= label_tag(user.name) %></p>
       <% end %>
 

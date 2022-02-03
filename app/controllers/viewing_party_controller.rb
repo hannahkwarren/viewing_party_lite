@@ -27,16 +27,15 @@ class ViewingPartyController < ApplicationController
    
     @viewing_party = ViewingParty.create(party_params)
 
-    params[:invitees].each do |invitee|
-      binding.pry
-      @viewing_party.invitees.create!(user_id: invitee.to_i)
-
-      @viewing_party.invitees.create(user_id: user.id, host: true)
+    params[:user_ids].each do |id|
+      @viewing_party.user_parties.create(user_id: id.to_i)
+      
+      @viewing_party.user_parties.create(user_id: id.to_i, host: true)
     end
 
     if @viewing_party.save
       flash[:success] = "Party created!"
-      redirect_to "/user/#{user.id}/dashboard"
+      redirect_to user_path(user)
     else
       flash[:alert] = "Could not create party, please try again."
       redirect_to "/users/#{user1.id}/movies/497698/viewing-party/new"
@@ -48,4 +47,4 @@ class ViewingPartyController < ApplicationController
     params.permit(:duration, :when, :time)
   end
 end
-# , :invitees => []
+

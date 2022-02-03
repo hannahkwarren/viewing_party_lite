@@ -15,14 +15,14 @@ ActiveRecord::Schema.define(version: 2022_02_03_193939) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "invitees", force: :cascade do |t|
+  create_table "user_parties", force: :cascade do |t|
     t.bigint "user_id"
-    t.bigint "party_id"
+    t.bigint "viewing_party_id"
     t.boolean "host"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["party_id"], name: "index_invitees_on_party_id"
-    t.index ["user_id"], name: "index_invitees_on_user_id"
+    t.index ["user_id"], name: "index_user_parties_on_user_id"
+    t.index ["viewing_party_id"], name: "index_user_parties_on_viewing_party_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -36,14 +36,11 @@ ActiveRecord::Schema.define(version: 2022_02_03_193939) do
     t.integer "duration"
     t.string "when"
     t.string "time"
-    t.bigint "host_id"
     t.string "movie_title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["host_id"], name: "index_viewing_parties_on_host_id"
   end
 
-  add_foreign_key "invitees", "users"
-  add_foreign_key "invitees", "viewing_parties", column: "party_id"
-  add_foreign_key "viewing_parties", "users", column: "host_id"
+  add_foreign_key "user_parties", "users"
+  add_foreign_key "user_parties", "viewing_parties"
 end

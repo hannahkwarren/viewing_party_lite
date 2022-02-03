@@ -27,7 +27,7 @@ RSpec.describe "New Viewing Party page", type: :feature do
 
       click_button "Create Party"
 
-      expect(current_path).to eq("/users/#{user1.id}/dashboard")
+      expect(current_path).to eq("/users/#{user1.id}")
     end
 
   end
