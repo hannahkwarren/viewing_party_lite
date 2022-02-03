@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "User Dashboard Page", type: :feature do 
 
   it "should have the user name in heading + button to go to the discover movies page" do 
-    
+
     user1 = User.create!(name: "Joe Schmoe", email: "joeschmoe@mail.com")
 
     visit user_path(user1)
