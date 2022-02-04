@@ -26,20 +26,30 @@ class ViewingPartyController < ApplicationController
     user = User.find(params[:id])
   
     @viewing_party = ViewingParty.create(party_params)
-
-    params[:user_ids].each do |id|
-      @viewing_party.user_parties.create(user_id: id.to_i)
+    binding.pry
+    users = User.find(params[:user_ids])
+    @viewing_party.user_parties.create(user: user, host: true)
+    users.each do |u|
+      @viewing_party.user_parties.create(user: u, host: false)
       @viewing_party.movie_title = @movie[:original_title]
-      @viewing_party.poster_path = @movie[:poster]
-      @viewing_party.user_parties.create(user_id: id.to_i, host: true)
+      @viewing_party.poster_path = @movie[:poster_path]
+      # @viewing_party.user_parties.last.update(user: u, host: false)
+      # @viewing_party.user_parties.create(user: u, host: true)
+
     end
+    # params[:user_ids].each do |id|
+    #   @viewing_party.user_parties.create(user_id: id.to_i)
+    #   @viewing_party.movie_title = @movie[:original_title]
+    #   @viewing_party.poster_path = @movie[:poster]
+    #   @viewing_party.user_parties.create(user_id: id.to_i, host: true)
+    # end
     
     if @viewing_party.save
       flash[:success] = "Party created!"
       redirect_to user_path(user)
     else
       flash[:alert] = "Could not create party, please try again."
-      redirect_to "/users/#{user1.id}/movies/497698/viewing-party/new"
+      redirect_to "/users/#{user1.id}/movies/497698/vifewing-party/new"
     end
   end
 
