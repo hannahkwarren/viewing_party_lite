@@ -1,8 +1,6 @@
 class UsersController < ApplicationController
   def show
-    @user = User.find(params[:id])
-    @user_party = UserParty.all
-    # binding.pry
+    @user = User.find(params[:id]) 
   end
 
   def new
