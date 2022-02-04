@@ -20,7 +20,6 @@ class UsersController < ApplicationController
 
   def discover 
     @user = User.find(params[:id])
-    @movie_image = MovieFacade.image()
   end
 
   def merge_params(p={})
