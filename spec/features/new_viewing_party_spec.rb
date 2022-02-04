@@ -4,7 +4,7 @@ RSpec.describe "New Viewing Party page", type: :feature do
 
   describe "the form" do 
 
-    it "has pre-filled duration default to movie runtime in minutes" do 
+    it "creates a new viewing-party with prefilled and input data" do 
 
       user1 = User.create!(name: "Joe Schmoe", email: "joeschmoe@mail.com")
       user2 = User.create!(name: "Jeffrey Schmoe", email: "jeffschmoe@mail.com")
@@ -28,6 +28,10 @@ RSpec.describe "New Viewing Party page", type: :feature do
       click_button "Create Party"
 
       expect(current_path).to eq("/users/#{user1.id}")
+      expect(page).to have_content("Party created!")
+      expect(page).to have_content("Black Widow")
+      expect(page).to have_content(Time.now + 1.day)
+      expect(page).to have_content("8:00 pm")
     end
 
   end
