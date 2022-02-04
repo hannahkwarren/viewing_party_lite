@@ -14,10 +14,10 @@ class MoviesController < ApplicationController
   end
 
   def details
-     @user = User.find(params[:id])
-     @movie = MovieFacade.movie_data(params[:movie_id])
-     @credits = MovieFacade.credits(params[:movie_id])
-     @movie_reviews = MovieFacade.reviews(params[:movie_id])
+    @user = User.find(params[:id])
+    @movie = MovieFacade.movie_data(params[:movie_id])
+    @credits = MovieFacade.credits(params[:movie_id])
+    @movie_reviews = MovieFacade.reviews(params[:movie_id])
     
     render '/users/details'
   end

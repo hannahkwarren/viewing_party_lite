@@ -36,7 +36,7 @@ class MovieService
       data = JSON.parse(response.body, symbolize_names: true)
       movies_data << data
     end
-
+    
     movies_data
   end
 
@@ -44,7 +44,7 @@ class MovieService
     data = connection.get("movie/#{movie_id}") do |request|
       request.params['api_key'] = ENV['movies_api_key']
     end
-
+    
     JSON.parse(data.body, symbolize_names: true)    
   end
 
@@ -52,8 +52,10 @@ class MovieService
     credits = connection.get("movie/#{movie_id}/credits") do |request|
       request.params['api_key'] = ENV['movies_api_key']
     end
+    
+    all = JSON.parse(credits.body, symbolize_names: true)
 
-    JSON.parse(credits.body, symbolize_names: true)
+    all[:cast][0..9]
   end
 
   def self.reviews(movie_id)
