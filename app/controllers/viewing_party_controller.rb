@@ -24,15 +24,15 @@ class ViewingPartyController < ApplicationController
     @movie = JSON.parse(response.body, symbolize_names: true)
 
     user = User.find(params[:id])
-   
+  
     @viewing_party = ViewingParty.create(party_params)
 
     params[:user_ids].each do |id|
       @viewing_party.user_parties.create(user_id: id.to_i)
-      
+      @viewing_party.movie_title = @movie[:original_title]
       @viewing_party.user_parties.create(user_id: id.to_i, host: true)
     end
-
+    
     if @viewing_party.save
       flash[:success] = "Party created!"
       redirect_to user_path(user)
