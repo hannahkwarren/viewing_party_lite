@@ -43,7 +43,7 @@ RSpec.describe "User Dashboard Page", type: :feature do
         expect(page).to have_content(party1.movie_title)
         expect(page).to have_content(party1.when)
         expect(page).to have_content(party1.time)
-        # expect(page).to have_content("Invited")
+        expect(page).to have_content("Invited")
       end
 
       visit user_path(user1)
@@ -53,7 +53,7 @@ RSpec.describe "User Dashboard Page", type: :feature do
         expect(page).to have_content(party1.movie_title)
         expect(page).to have_content(party1.when)
         expect(page).to have_content(party1.time)
-        # expect(page).to have_content("Hosting")
+        expect(page).to have_content("Hosting")
       end
 
     end
