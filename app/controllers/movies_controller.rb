@@ -8,7 +8,7 @@ class MoviesController < ApplicationController
   end
 
   def results
-    @m_data = MovieFacade.details(params[:q], params[:query])
+    @m_data = MovieFacade.details(params[:query])
     @user = User.find(params[:id])
     render '/users/movies'
   end

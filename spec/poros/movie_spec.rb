@@ -23,6 +23,7 @@ RSpec.describe Movie do
       }], 
       poster_path: "/qAZ0pzat24kLdO3o8ejmbLxyOac.jpg"
     }
+    
     movie = Movie.new(attributes)
 
     expect(movie).to be_a Movie

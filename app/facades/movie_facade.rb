@@ -6,10 +6,10 @@ class MovieFacade
     end
   end
 
-  def self.details(q, query)
+  def self.details(query)
     movie_data = []
 
-    if q == 'top rated'
+    if query == 'top rated'
       count = 1
 
       2.times do
