@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 2022_02_03_193939) do
     t.string "when"
     t.string "time"
     t.string "movie_title"
+    t.string "poster_path"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

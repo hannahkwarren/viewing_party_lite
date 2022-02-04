@@ -30,7 +30,7 @@ RSpec.describe "User Dashboard Page", type: :feature do
       user2 = User.create!(name: "Jeffrey Schmoe", email: "jeffschmoe@mail.com")
       user3 = User.create!(name: "Moe Schmoe", email: "moeschmoe@mail.com")
 
-      party1 = ViewingParty.create!(duration: 184, when: "2023/02/07", time: "9:00pm", movie_title: "Black Widow")
+      party1 = ViewingParty.create!(duration: 184, when: "2023/02/07", time: "9:00pm", movie_title: "Black Widow",  poster_path:"/qAZ0pzat24kLdO3o8ejmbLxyOac.jpg")
 
       user_party1 = party1.user_parties.create!(user_id: user1.id, viewing_party_id: party1.id, host: true)
       user_party2 = party1.user_parties.create!(user_id: user2.id, viewing_party_id: party1.id, host: false)
@@ -39,19 +39,21 @@ RSpec.describe "User Dashboard Page", type: :feature do
       visit user_path(user3)
       
       within".viewing-parties" do
+        expect(page).to have_css("img[src*='/qAZ0pzat24kLdO3o8ejmbLxyOac.jpg']")
         expect(page).to have_content(party1.movie_title)
         expect(page).to have_content(party1.when)
         expect(page).to have_content(party1.time)
-        # expect(page).to have_content("Invited")
+        expect(page).to have_content("Invited")
       end
 
       visit user_path(user1)
 
       within".viewing-parties" do
+        expect(page).to have_css("img[src*='/qAZ0pzat24kLdO3o8ejmbLxyOac.jpg']")
         expect(page).to have_content(party1.movie_title)
         expect(page).to have_content(party1.when)
         expect(page).to have_content(party1.time)
-        # expect(page).to have_content("Hosting")
+        expect(page).to have_content("Hosting")
       end
 
     end

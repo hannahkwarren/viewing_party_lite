@@ -3,10 +3,12 @@ require 'rails_helper'
 RSpec.describe 'movies results page', type: :feature do
 
   describe 'user requests top rated movies' do
+
     it "displays top rated movies" do
       VCR.use_cassette('movie_db_discover_top_rated') do
         
         user1 = User.create!(name: 'Joe Schmoe', email: 'jschmoe1@mail.com')
+
         visit("/users/#{user1.id}/discover")
 
         click_button 'Find Top Rated Movies'
@@ -19,9 +21,11 @@ RSpec.describe 'movies results page', type: :feature do
         end
       end
     end
+
   end
 
   describe 'user searches for movies' do
+
     it "displays searched movies" do
       VCR.use_cassette('movie_db_discover_search') do
         
@@ -38,5 +42,6 @@ RSpec.describe 'movies results page', type: :feature do
         end
       end
     end
+    
   end
 end
