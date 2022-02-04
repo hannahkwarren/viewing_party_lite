@@ -1,4 +1,5 @@
 class MovieFacade
+
   def self.connection
      Faraday.new(url: 'https://api.themoviedb.org/3/') do |faraday|
       faraday.params['api_key'] = ENV['movies_api_key']
@@ -63,4 +64,5 @@ class MovieFacade
     end
     @movie_reviews = JSON.parse(reviews.body, symbolize_names: true)
   end
+
 end

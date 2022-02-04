@@ -1,5 +1,5 @@
 class Movie
-  attr_reader :original_title, :vote_average, :id, :overview, :runtime, :genres
+  attr_reader :original_title, :vote_average, :id, :overview, :runtime, :genres, :poster
 
   def initialize(attributes)
     @id = attributes[:id]
@@ -8,6 +8,7 @@ class Movie
     @overview = attributes[:overview]
     @runtime = attributes[:runtime]
     @genres = attributes[:genres]
-
+    @poster = attributes[:poster_path]
   end
+  
 end

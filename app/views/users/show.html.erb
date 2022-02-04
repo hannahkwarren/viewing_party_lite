@@ -8,6 +8,9 @@
 <div class="viewing-parties">
   <% if @user.viewing_parties != nil %>
     <% @user.viewing_parties.each do |party| %>
+
+      <%= image_tag("#{party.image_url}") %>
+
       <p><%= party.movie_title %></p>
       <p><%= party.when %></p>
       <p><%= party.time %></p>

@@ -15,7 +15,6 @@ class MoviesController < ApplicationController
 
   def details
      @user = User.find(params[:id])
-    #  binding.pry
      @movie = MovieFacade.movie_data(params[:movie_id])
      @credits = MovieFacade.credits(params[:movie_id])
      @movie_reviews = MovieFacade.reviews(params[:movie_id])

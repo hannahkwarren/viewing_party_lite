@@ -5,6 +5,7 @@ class CreateViewingParties < ActiveRecord::Migration[5.2]
       t.string :when
       t.string :time
       t.string :movie_title
+      t.string :poster_path
       t.timestamps
     end
   end
