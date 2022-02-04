@@ -14,14 +14,12 @@
       <p><%= party.movie_title %></p>
       <p><%= party.when %></p>
       <p><%= party.time %></p>
-      <% @user_party.each do |up|%>
-        <% if up.user_id == @user.id && up.host == true && up.viewing_party_id == party.id %>
+      <% party.user_parties.hosting(@user).each do |up|%>
           <p>Hosting</p>
-          <% else %>
+        <% end %>
+      <% party.user_parties.invited(@user).each do |up|%>
           <p>Invited</p>
-          
-    <% end %>
-    <% end %>
+        <% end %>
     <% end %>
   <% end %>
 </div>
