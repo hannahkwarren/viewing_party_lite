@@ -1,0 +1,25 @@
+<h1>Viewing Party Lite</h1>
+
+<h2>Create a Movie Party for <%= @movie[:original_title] %></h2>
+
+<%= form_with model: @viewing_party, local: true do |f| %>
+
+  <%= f.label :duration, "Duration" %>
+  <%= f.text_field :duration, :value => @movie[:runtime] %>
+
+  <%= f.label :when %>
+  <%= f.date_field :when %>
+
+  <%= f.label :time, "Start Time" %>
+  <%= f.text_field :time %>
+
+  <p>Invite Users to Your Viewing Party</p>
+    
+    <% @users.each do |user| %>
+      <p><%= check_box_tag( 'user_ids[]', user.id, nil, :id => user.name)%>
+      <%= label_tag(user.name) %></p>
+      <% end %>
+
+  <%= f.submit "Create Party" %>
+
+<% end %>
