@@ -22,10 +22,6 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-  def merge_params(p={})
-    params.merch(p).delete_if{|k,v| v.blank?}
-  end
-
   private
   def user_params
     params.permit(:name, :email)

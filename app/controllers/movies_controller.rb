@@ -1,11 +1,6 @@
 require 'faraday'
 
 class MoviesController < ApplicationController
-  def connection
-    Faraday.new(url: 'https://api.themoviedb.org/3/') do |faraday|
-      faraday.params['api_key'] = ENV['movies_api_key']
-    end
-  end
 
   def results
     @m_data = MovieFacade.details(params[:query])
