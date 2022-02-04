@@ -20,6 +20,8 @@ class UsersController < ApplicationController
 
   def discover 
     @user = User.find(params[:id])
+    binding.pry
+    @viewing_parties = @user.viewing_parties
   end
 
   def merge_params(p={})

@@ -15,4 +15,5 @@ Rails.application.routes.draw do
   
   get '/users/:id/movies/:movie_id/viewing-party/new', to: 'viewing_party#new'
   post '/users/:id/movies/:movie_id/viewing-party/new', to: 'viewing_party#create'
+  
 end
