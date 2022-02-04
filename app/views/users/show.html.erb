@@ -14,6 +14,12 @@
       <p><%= party.movie_title %></p>
       <p><%= party.when %></p>
       <p><%= party.time %></p>
+      <% party.user_parties.hosting(@user).each do |up|%>
+          <p>Hosting</p>
+        <% end %>
+      <% party.user_parties.invited(@user).each do |up|%>
+          <p>Invited</p>
+        <% end %>
     <% end %>
   <% end %>
 </div>
