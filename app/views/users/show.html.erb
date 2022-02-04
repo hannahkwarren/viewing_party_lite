@@ -6,10 +6,11 @@
 </div>
 
 <div class="viewing-parties">
-<% if @viewing_parties != nil %>
-  <% @viewing_parties.each do |party| %>
-    <p><%= party.movie_title %></p>
-    <p><%= party.when %></p>
-    <p><%= party.time %></p>
+  <% if @user.viewing_parties != nil %>
+    <% @user.viewing_parties.each do |party| %>
+      <p><%= party.movie_title %></p>
+      <p><%= party.when %></p>
+      <p><%= party.time %></p>
+    <% end %>
   <% end %>
-<% end %>
+</div>
