@@ -4,3 +4,13 @@
 <div class="movie-discovery">
   <%= button_to "Discover Movies", "/users/#{@user.id}/discover", method: :get %>
 </div>
+
+<div class="viewing-parties">
+  <% if @user.viewing_parties != nil %>
+    <% @user.viewing_parties.each do |party| %>
+      <p><%= party.movie_title %></p>
+      <p><%= party.when %></p>
+      <p><%= party.time %></p>
+    <% end %>
+  <% end %>
+</div>
