@@ -2,7 +2,7 @@ class MovieFacade
 
   def self.details(query)
     json = MovieService.details(query)
-
+    # binding.pry
     @m_details = json.map do |movie|
       movie[:results].map do |m|
         Movie.new(m)

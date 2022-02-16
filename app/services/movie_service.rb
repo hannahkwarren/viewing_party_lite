@@ -1,5 +1,6 @@
-class MovieService 
+# app/services/movie_service.rb
 
+class MovieService 
   def self.connection
     Faraday.new(url: 'https://api.themoviedb.org/3/') do |faraday|
       faraday.params['api_key'] = ENV['movies_api_key']
@@ -21,7 +22,7 @@ class MovieService
           request.params['sort_by'] = 'vote_average.desc'
           request.params['page'] = count
         end
-        
+
         count += 1
         data = JSON.parse(response.body, symbolize_names: true)
         movies_data << data
