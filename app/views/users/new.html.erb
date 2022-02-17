@@ -1,7 +1,7 @@
 <h1>Viewing Party Lite</h1>
 <h2>Register a New User</h2>
 
-<%= form_with url: '/register', local: true do |f| %>
+<%= form_with model: @user, url: register_path, local: true do |f| %>
   <%= f.label :name, "Name" %>
   <%= f.text_field :name %>
 

@@ -4,16 +4,20 @@ class UsersController < ApplicationController
   end
 
   def new
+    @user = User.new
   end
 
   def create
-    user = User.create(user_params)
-    if user.save
-      flash[:success] = "Welcome, #{user.name}!"
-      redirect_to user_path(user)
+    @user = User.create(user_params)
+    # binding.pry
+    if @user.save
+      flash[:success] = "Welcome, #{@user.name}!"
+      redirect_to user_path(@user)
     else
-      flash[:alert] = "#{user_params[:email]} has already been taken, please try another email address."
-      redirect_to '/register'
+      @user.errors.full_messages.each do |msg|
+        flash[:alert] = msg
+      end
+      render 'new'
     end
   end
 
@@ -23,6 +27,6 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.permit(:name, :email, :password, :password_confirmation)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
 end
